@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル\Game">
+      <UniqueIdentifier>{aeaec0df-e070-438a-b52e-b031cf94235b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Enemy">
+      <UniqueIdentifier>{3cafb405-e6be-4406-bdd8-3a0d739dde4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Camera">
+      <UniqueIdentifier>{999f3c0c-3ef8-4ff3-bab3-5d58023628ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Player">
+      <UniqueIdentifier>{9200c7f2-2f55-47dc-9f6e-220cf532abd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Scene">
+      <UniqueIdentifier>{54c5c1f7-7bf7-4fd5-b2a0-929df63cd80a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Stage">
+      <UniqueIdentifier>{a882f9a5-301b-4249-8efa-d2972b5f61f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\FPS">
+      <UniqueIdentifier>{cd5346bb-4783-41bd-8846-6899ccd166c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\ActionManager">
+      <UniqueIdentifier>{13218c09-8f5a-421e-ba7a-10d79b7d685e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Score">
+      <UniqueIdentifier>{f617fe52-c496-49ef-a343-d09f66aae1d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Fire">
+      <UniqueIdentifier>{5f4d8626-09c5-413a-81a6-c2f7ed0c5396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Collision">
+      <UniqueIdentifier>{bece5f1c-9773-4ffa-84e2-4a8d4ea8a3e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Effect">
+      <UniqueIdentifier>{702773d9-4c45-4894-ae99-7d8df0a3cc7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\BackGround">
+      <UniqueIdentifier>{a86d84a2-d15e-473e-a6c1-96a459261882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Dark">
+      <UniqueIdentifier>{d8fa5ed2-4a3a-4b43-a4ac-61a0c14bd875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Sky">
+      <UniqueIdentifier>{4cf281bd-e0bd-43e0-8c4d-ddfa3d48088f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\SoundManager">
+      <UniqueIdentifier>{d51ebaf9-3873-4588-ba59-44a09ff99c2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\InputManager">
+      <UniqueIdentifier>{db962a95-a8c3-487c-b1b7-60fdd243807e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PlayerState">
+      <UniqueIdentifier>{e2cd5e44-9b7e-4689-ba80-de079f5f42c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PlayerState\Move">
+      <UniqueIdentifier>{8910a5f2-681f-44b3-b7fe-a609d163eeef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PlayerState\Attack">
+      <UniqueIdentifier>{288a99f5-5048-406a-881b-9ae85dfabfdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Stage\Block">
+      <UniqueIdentifier>{b767d6dd-557a-431a-b501-95c4255c2367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\FileManager">
+      <UniqueIdentifier>{26f30665-175e-4695-a1e1-87bccde56607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\PlaySceneUI">
+      <UniqueIdentifier>{d17e324c-b267-4661-a040-bf67e2ed21bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\Timer">
+      <UniqueIdentifier>{ae7a6e06-80c6-452e-a8cc-93e5be62920e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp">
+      <Filter>リソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBase.cpp">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyList.cpp">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="FireFly.cpp">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>リソース ファイル\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>リソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>リソース ファイル\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>リソース ファイル\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FPS.cpp">
+      <Filter>リソース ファイル\FPS</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionManager.cpp">
+      <Filter>リソース ファイル\ActionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>リソース ファイル\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="Boar.cpp">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Fire.cpp">
+      <Filter>リソース ファイル\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="FireList.cpp">
+      <Filter>リソース ファイル\Fire</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Capsule.cpp">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectCreater.cpp">
+      <Filter>リソース ファイル\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="BackGround.cpp">
+      <Filter>リソース ファイル\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Dark.cpp">
+      <Filter>リソース ファイル\Dark</Filter>
+    </ClCompile>
+    <ClCompile Include="Sky.cpp">
+      <Filter>リソース ファイル\Sky</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>リソース ファイル\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>リソース ファイル\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerState.cpp">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="NoActionState.cpp">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftMoveState.cpp">
+      <Filter>リソース ファイル\PlayerState\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="RightMoveState.cpp">
+      <Filter>リソース ファイル\PlayerState\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="FallState.cpp">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="DownAttackState.cpp">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftAttackState.cpp">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="RightAttackState.cpp">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="UpAttackState.cpp">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockBase.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="BreakableBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="CrumblyBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="FireBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="UnbreakableBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="SharpBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="BombAttackState.cpp">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="FileManager.cpp">
+      <Filter>リソース ファイル\FileManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SwallowDarkState.cpp">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="BarrierItemBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="BombItemBlock.cpp">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionState.cpp">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaySceneUI.cpp">
+      <Filter>リソース ファイル\PlaySceneUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>リソース ファイル\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultScene.cpp">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="TutorialScene.cpp">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>リソース ファイル\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBase.h">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyList.h">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="FireFly.h">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>リソース ファイル\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>リソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>リソース ファイル\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>リソース ファイル\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FPS.h">
+      <Filter>リソース ファイル\FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionManager.h">
+      <Filter>リソース ファイル\ActionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>リソース ファイル\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="Boar.h">
+      <Filter>リソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Fire.h">
+      <Filter>リソース ファイル\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="FireList.h">
+      <Filter>リソース ファイル\Fire</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Capsule.h">
+      <Filter>リソース ファイル\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectCreater.h">
+      <Filter>リソース ファイル\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="BackGround.h">
+      <Filter>リソース ファイル\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Dark.h">
+      <Filter>リソース ファイル\Dark</Filter>
+    </ClInclude>
+    <ClInclude Include="Sky.h">
+      <Filter>リソース ファイル\Sky</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>リソース ファイル\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>リソース ファイル\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerState.h">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="NoActionState.h">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftMoveState.h">
+      <Filter>リソース ファイル\PlayerState\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="RightMoveState.h">
+      <Filter>リソース ファイル\PlayerState\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="FallState.h">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="DownAttackState.h">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftAttackState.h">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="RightAttackState.h">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="UpAttackState.h">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockBase.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="BreakableBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="CrumblyBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="FireBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="UnbreakableBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="SharpBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="BombAttackState.h">
+      <Filter>リソース ファイル\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="FileManager.h">
+      <Filter>リソース ファイル\FileManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SwallowDarkState.h">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="BarrierItemBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="BombItemBlock.h">
+      <Filter>リソース ファイル\Stage\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionState.h">
+      <Filter>リソース ファイル\PlayerState</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaySceneUI.h">
+      <Filter>リソース ファイル\PlaySceneUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>リソース ファイル\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultScene.h">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="TutorialScene.h">
+      <Filter>リソース ファイル\Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
