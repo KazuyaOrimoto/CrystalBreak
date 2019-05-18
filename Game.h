@@ -8,7 +8,7 @@ class FPS;
 class SceneBase;
 
 /**
-	@brief	ゲーム全体をまとめるクラス
+    @brief  ゲーム全体をまとめるクラス
 */
 class Game
 {
@@ -16,22 +16,22 @@ public:
     Game();
     ~Game();
 /**
-	@brief	ゲームのループを回す
+    @brief  ゲームのループを回す
 */
     void GameLoop();
 
 private:
 /**
-	@brief	ゲームの継続判定
-	@return	true:継続、false:終了
+    @brief  ゲームの継続判定
+    @return true:継続、false:終了
 */
     bool IsContinueGame();
 
 /**
-	@brief	シーンを変更
+    @brief  シーンを変更
 */
 	void SceneChange();	
 
-    FPS*		fps;						//FPSクラスのポインタ
-    SceneBase*	nowScene, *nextScene;		//シーンクラスのポインタ
+    FPS         *fps;                       //FPSクラスのポインタ
+    SceneBase   *nowScene, *nextScene;      //シーンクラスのポインタ
 };
