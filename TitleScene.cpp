@@ -20,13 +20,13 @@ TitleScene::TitleScene()
     inputManager = InputManager::GetInstance();
     fileManager = FileManager::GetInstance();
     titleBackGroundGraph = fileManager->GetTitleImage();
-    pushGraph = fileManager->GetPushImage();
+    pushStartGraph = fileManager->GetPushImage();
     demoPlayMovie = fileManager->GetDemoPlayMovie();
     changingOpacityValue = 1;
     SceneChangeFlag = false;
     playMovie = false;
     playcount = 0;
-    opacity = 0;
+    pushStartOpacity = 0;
 }
 
 //-----------------------------------------------------------------------------//
@@ -78,8 +78,8 @@ void TitleScene::Draw()
     {
         SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX);
         DrawGraph(0, 0, titleBackGroundGraph, TRUE);
-        SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX - opacity);
-        DrawGraph(0, 0, pushGraph, TRUE);
+        SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX - pushStartOpacity);
+        DrawGraph(0, 0, pushStartGraph, TRUE);
     }
 }
 
@@ -88,8 +88,8 @@ void TitleScene::Draw()
 //-----------------------------------------------------------------------------//
 void TitleScene::GraphAnimation()
 {
-    opacity += changingOpacityValue;
-    bool switchFlag = (opacity < 0 || OPACITY_MAX < opacity);       //不透明度が0より小さいor上限より大きい
+    pushStartOpacity += changingOpacityValue;
+    bool switchFlag = (pushStartOpacity < 0 || OPACITY_MAX < pushStartOpacity);       //不透明度が0より小さいor上限より大きい
     if (switchFlag)
     {
         changingOpacityValue *= -1;
