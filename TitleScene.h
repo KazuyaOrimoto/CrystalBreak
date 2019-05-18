@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------------//
-//			リファクタリング：未					チェック：未
+//          リファクタリング：未                  チェック：未
 //-----------------------------------------------------------------------------//
 #pragma once
 
@@ -11,39 +11,43 @@ class TitleSceneSlime;
 class FileManager;
 
 /**
-	@brief	タイトルシーンクラス
+    @brief	タイトルシーンクラス
 */
 class TitleScene : public SceneBase
 {
 public:
-	//-----------------------------------------------------------------------------//
-	//							パブリック関数
-	//-----------------------------------------------------------------------------//
     TitleScene();
-    ~TitleScene()override;
-
+    ~TitleScene()       override;
+    /**
+        @brief	現在のシーンのアップデート処理をまとめて行う
+        @return 次のフレームで実行するシーンのインスタンス
+    */
     SceneBase* Update() override;
-    void Draw() override;
+    /**
+        @brief	現在のシーンの描画処理
+    */
+    void Draw()         override;
 private:
-	//-----------------------------------------------------------------------------//
-	//							プライベート関数
-	//-----------------------------------------------------------------------------//
+    /**
+        @brief	表示している画像のアニメーション処理
+    */
 	void GraphAnimation();
-	void PlayingMovie();
-	//-----------------------------------------------------------------------------//
-	//							プライベート変数
-	//-----------------------------------------------------------------------------//
-	InputManager* inputManager;
-	FileManager* fileManager;
-	int titleGraph;
-	int pushGraph;
-	int opacity;									//不透明度
-	int changingOpacityValue;
-	int demoPlayMovie;
-	int playcount;
-	bool playMovie;
-	bool SceneChangeFlag;
-	bool needPlayingMovie;
-	const int OPACITY_MAX = 80;						//タイトルでアニメーションさせる画像の不透明度の上限値（0~255）
-	const int playMovieUpToTime = 60 * 5;			//デモプレイムービーを流すまでの時間
+    /**
+        @brief	デモムービーを流す処理
+    */
+	void PlayMovie();
+
+	InputManager    *inputManager;                  //入力管理クラスのポインタ
+	FileManager     *fileManager;                   //ファイル管理クラスのポインタ
+	int             titleBackGroundGraph;           //タイトルの背景画像
+	int             pushStartGraph;                 //PushStartの画像
+	int             pushStartOpacity;               //不透明度
+	int             changingOpacityValue;
+	int             demoPlayMovie;
+	int             playcount;
+	bool            playMovie;
+	bool            SceneChangeFlag;
+	bool            needPlayingMovie;
+	const int       OPACITY_MAX = 80;                     //タイトルでアニメーションさせる画像の不透明度の上限値（0~255）
+	const int       playMovieUpToTime = 60 * 5;           //デモプレイムービーを流すまでの時間
 };
