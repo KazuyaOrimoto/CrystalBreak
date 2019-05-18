@@ -1,6 +1,8 @@
-﻿#pragma once
+﻿//-----------------------------------------------------------------------------//
+//			リファクタリング：未					チェック：未
+//-----------------------------------------------------------------------------//
+#pragma once
 
-//クラスの前方宣言
 class Scenebase;
 class InputManager;
 class Sky;
@@ -8,6 +10,9 @@ class EffectCreater;
 class TitleSceneSlime;
 class FileManager;
 
+/**
+	@brief	タイトルシーンクラス
+*/
 class TitleScene : public SceneBase
 {
 public:
@@ -16,6 +21,7 @@ public:
 	//-----------------------------------------------------------------------------//
     TitleScene();
     ~TitleScene()override;
+
     SceneBase* Update() override;
     void Draw() override;
 private:
