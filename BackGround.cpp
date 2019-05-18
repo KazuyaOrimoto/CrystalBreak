@@ -1,4 +1,8 @@
-﻿#include "Common.h"
+﻿//-----------------------------------------------------------------------------//
+//          リファクタリング：未                  チェック：未
+//-----------------------------------------------------------------------------//
+
+#include "Common.h"
 #include "BackGround.h"
 
 BackGround::BackGround(int sorceModelHandle, VECTOR positionValue)
