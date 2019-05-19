@@ -8,6 +8,7 @@
 //全ファイル共通ライブラリ
 //-----------------------------------------------------------------------------//
 #include "DxLib.h"
+#include "IndexPair.h"
 #include "EffekseerForDXLib.h"
 #include <vector>
 #include <map>
@@ -68,46 +69,7 @@ const static float CAMERA_SCREEN_CENTER_X = SCREEN_W / 4.0f;
 const static float CAMERA_SCREEN_CENTER_Y = SCREEN_H / 2.0f;
 const static int ALPHA_MAX = 255;
 
-struct IndexPair
-{
-	int x;
-	int y;
-	bool operator < (const IndexPair& value) const
-	{
-		int compareNum = x * 100 + y;
-		int conpareValue = value.x * 100 + value.y;
-		if (compareNum < conpareValue)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-		return false;
-	}
 
-	IndexPair IndexPairRight()
-	{
-		IndexPair right = { x + 1 ,y };
-		return right;
-	}
-	IndexPair IndexPairLeft()
-	{
-		IndexPair left = { x - 1 ,y };
-		return left;
-	}
-	IndexPair IndexPairUp()
-	{
-		IndexPair up = { x ,y - 1 };
-		return up;
-	}
-	IndexPair IndexPairDown()
-	{
-		IndexPair down = { x  ,y + 1 };
-		return down;
-	}
-};
 
 enum BlockName
 {

@@ -387,5 +387,6 @@
     <ClInclude Include="TutorialScene.h">
       <Filter>リソース ファイル\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="IndexPair.h" />
   </ItemGroup>
 </Project>
