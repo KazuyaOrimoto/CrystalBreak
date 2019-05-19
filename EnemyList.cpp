@@ -74,7 +74,7 @@ void EnemyList::Draw()
 //-----------------------------------------------------------------------------//
 //							エネミーリストを渡す
 //-----------------------------------------------------------------------------//
-EnemyVector EnemyList::GetEnemyList()
+EnemyContainer EnemyList::GetEnemyList()
 {
 	return enemyList;
 }

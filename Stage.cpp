@@ -86,7 +86,7 @@ void Stage::Update()
 			itr->Update();
 		}
 	}
-	BlockVector::iterator itr = blockList.begin();
+	BlockContainer::iterator itr = blockList.begin();
 	while (itr != blockList.end())
 	{
 		if ((*itr)->IsActive() == false)
@@ -151,7 +151,7 @@ bool Stage::CheckOnGround(IndexPair nowIndexPair)
 	{
 		if (10 < nowIndexPair.y && nowIndexPair.y < 12)
 		{
-			BlockVector::iterator itr = blockList.begin();
+			BlockContainer::iterator itr = blockList.begin();
 			for (itr; itr != blockList.begin() + beforeBlockNum; itr++)
 			{
 				delete(*itr);
@@ -240,7 +240,7 @@ BlockMap Stage::GetBlockMap()
 	return blockMap;
 }
 
-BlockVector Stage::GetBlockList()
+BlockContainer Stage::GetBlockList()
 {
 	return blockList;
 }

@@ -28,8 +28,8 @@ private:
 	bool CheckSphereAndSphere(const Sphere& sphereA, const Sphere& sphereB);		//球と球の当たり判定
 	bool CheckSphereAndCapsule(const Sphere& sphere, const Capsule& capsule);		//球とカプセルの当たり判定
 	bool CheckCapsuleAndCapsule(const Capsule& capsuleA, const Capsule& capsuleB);	//カプセルとカプセルの当たり判定
-	FireVector fireListCopy;
-	BlockVector blockListCopy;
-	EnemyVector enemyListCopy;
+	FireContainer fireListCopy;
+	BlockContainer blockListCopy;
+	EnemyContainer enemyListCopy;
 };
 

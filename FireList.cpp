@@ -99,7 +99,7 @@ void FireList::Draw()
 	}
 }
 
-FireVector FireList::GetFireList()
+FireContainer FireList::GetFireList()
 {
 	return fireList;
 }

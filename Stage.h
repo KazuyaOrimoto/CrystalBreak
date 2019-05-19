@@ -30,7 +30,7 @@ public:
 	void BreakBlock(IndexPair breakingIndexPair, Player & player);
 	BlockName GetBlockName(IndexPair nowIndexPair);
 	BlockMap GetBlockMap();
-	BlockVector GetBlockList();
+	BlockContainer GetBlockList();
 	void OnGroundStage(IndexPair nowIndexPair, Player& player);
 	void GetMapData(int mapData[BLOCK_NUM_Y][BLOCK_NUM_X]);
 	bool needDrawModel(VECTOR position);
@@ -46,7 +46,7 @@ private:
 	//-----------------------------------------------------------------------------//
 	//							プライベート変数
 	//-----------------------------------------------------------------------------//
-	BlockVector blockList;
+	BlockContainer blockList;
 	BlockMap blockMap;
 	std::vector<BackGround*> backGroundList;
 	int map[BLOCK_NUM_Y][BLOCK_NUM_X];

@@ -23,10 +23,10 @@ class Fire;
 
 using namespace std;
 
-typedef std::vector<EnemyBase*> EnemyVector;
-typedef std::vector<BlockBase*> BlockVector;
+typedef std::vector<EnemyBase*> EnemyContainer;
+typedef std::vector<BlockBase*> BlockContainer;
 typedef std::map<IndexPair, BlockBase*> BlockMap;
-typedef std::vector<Fire*> FireVector;
+typedef std::vector<Fire*> FireContainer;
 
 //-----------------------------------------------------------------------------//
 //全ファイル共通の定数
