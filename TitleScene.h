@@ -37,17 +37,17 @@ private:
     */
 	void PlayMovie();
 
-	InputManager    *inputManager;                  //入力管理クラスのポインタ
-	FileManager     *fileManager;                   //ファイル管理クラスのポインタ
-	int             titleBackGroundGraph;           //タイトルの背景画像
-	int             pushStartGraph;                 //PushStartの画像
-	int             pushStartOpacity;               //不透明度
-	int             changingOpacityValue;
-	int             demoPlayMovie;
-	int             playcount;
-	bool            playMovie;
-	bool            SceneChangeFlag;
-	bool            needPlayingMovie;
-	const int       OPACITY_MAX = 80;                     //タイトルでアニメーションさせる画像の不透明度の上限値（0~255）
-	const int       playMovieUpToTime = 60 * 5;           //デモプレイムービーを流すまでの時間
+	InputManager*		inputManager;						//入力管理クラスのポインタ
+	FileManager*		fileManager;						//ファイル管理クラスのポインタ
+	int					titleBackGroundGraph;				//タイトルの背景画像
+	int					pushStartGraph;						//PushStartの画像
+	int					pushStartOpacity;					//不透明度
+	int					changingOpacityValue;
+	int					demoPlayMovie;
+	int					playcount;
+	bool				playMovie;
+	bool				SceneChangeFlag;
+	bool				needPlayingMovie;
+	static const int    OPACITY_MAX = 80;                    //タイトルでアニメーションさせる画像の不透明度の上限値（0~255）
+	static const int    PLAY_MOVIE_UP_TO_TIME = 60 * 5;      //デモプレイムービーを流すまでの時間
 };
