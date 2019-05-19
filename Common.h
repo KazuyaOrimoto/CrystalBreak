@@ -23,7 +23,6 @@ class Fire;
 
 using namespace std;
 
-typedef tagVECTOR VECTOR;
 typedef std::vector<EnemyBase*> EnemyVector;
 typedef std::vector<BlockBase*> BlockVector;
 typedef std::map<IndexPair, BlockBase*> BlockMap;

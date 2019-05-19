@@ -12,13 +12,15 @@
 #include "FileManager.h"
 
 Game::Game()
-    :nowScene(SceneBase::InitScene())
-    , fps(new FPS())
+    : nowScene(NULL)
+    , fps(NULL)
 {
     Score           ::CreateInstance();                 //Scoreクラスのインスタンスを作成
     EffectCreater   ::CreateInstance();                 //EffectCreaterクラスのインスタンスを作成
     SoundManager    ::CreateInstance();                 //SoundManagerクラスのインスタンスを作成
     FileManager     ::CreateInstance();                 //FileManagerクラスのインスタンスを作成
+	nowScene = SceneBase::InitScene();
+	fps = new FPS();
 }
 
 Game::~Game()

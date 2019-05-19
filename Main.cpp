@@ -14,7 +14,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 	SetDrawScreen(DX_SCREEN_BACK);                              //裏の画面にグラフィック領域を指定
 
 	/*                  ゲームの処理                    */
-	Game * game = new Game();                                   //ゲームに使用するメモリの割り当て
+	Game* game = new Game();									//ゲームに使用するメモリの割り当て
 	game->GameLoop();                                           //ゲームを開始
 	delete(game);                                               //ゲームに使用したメモリの開放
 
