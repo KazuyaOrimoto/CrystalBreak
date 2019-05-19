@@ -102,7 +102,7 @@ void TitleScene::GraphAnimation()
 void TitleScene::PlayMovie()
 {
     playcount++;
-    if (playcount > playMovieUpToTime)
+    if (playcount > PLAY_MOVIE_UP_TO_TIME)
     {
         playMovie = true;
     }

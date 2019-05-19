@@ -16,8 +16,8 @@ class FileManager;
 class TitleScene : public SceneBase
 {
 public:
-    TitleScene();
-    ~TitleScene()       override;
+	TitleScene()				{};
+	~TitleScene()      override	{};
     /**
         @brief	現在のシーンのアップデート処理をまとめて行う
         @return 次のフレームで実行するシーンのインスタンス

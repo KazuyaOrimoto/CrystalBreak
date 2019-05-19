@@ -9,13 +9,6 @@
 #include "TitleScene.h"
 #include "ResultScene.h"
 
-SceneBase::SceneBase()
-{
-}
-
-SceneBase::~SceneBase()
-{
-}
 
 SceneBase * SceneBase::InitScene()
 {
