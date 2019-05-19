@@ -33,6 +33,9 @@ Game::~Game()
     delete(nowScene);
 }
 
+/**
+	@brief  ゲームのループを回す
+*/
 void Game::GameLoop()
 {
 	while (IsContinueGame())
@@ -51,6 +54,10 @@ void Game::GameLoop()
 	}
 }
 
+/**
+	@brief  ゲームの継続判定
+	@return true:継続、false:終了
+*/
 bool Game::IsContinueGame()
 {
     if (ProcessMessage())
@@ -64,6 +71,9 @@ bool Game::IsContinueGame()
     return true;
 }
 
+/**
+	@brief  シーンを変更
+*/
 void Game::SceneChange()
 {
     delete(nowScene);
