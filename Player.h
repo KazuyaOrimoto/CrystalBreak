@@ -1,6 +1,9 @@
-﻿#pragma once
+﻿//-----------------------------------------------------------------------------//
+//          リファクタリング：未                  チェック：未
+//-----------------------------------------------------------------------------//
 
-//クラスの前方宣言
+#pragma once
+
 class Camera;
 class Stage;
 class ActionManager;
@@ -15,9 +18,6 @@ class Score;
 class Player
 {
 public:
-	//-----------------------------------------------------------------------------//
-	//							パブリック関数
-	//-----------------------------------------------------------------------------//
 	Player(ActionManager actionManager);
 	~Player();
 	void Update(Stage& stage, Camera & camera, ActionManager& actionManager, InputManager& inputManager);
@@ -32,16 +32,46 @@ public:
 	void PlayerDie();
 	void PlayExplosion();
 	void GameEnd(){gameEndFlag = true;}
-	//-----------------------------------------------------------------------------//
-	//							getter関数
-	//-----------------------------------------------------------------------------//
+
+    /**
+        @brief  エフェクト発生位置のgetter関数
+        @return 吸い込まれるエフェクトの発生ポジションを返す
+    */
 	VECTOR GetSwallowPosition() { return swallowDarkPosition; }
+    /**
+        @brief  プレイヤーのRotationのgetter関数
+        @return 現在のモデルがどのくらい回転しているかを返す
+    */
 	VECTOR GetRotation() { return MV1GetRotationXYZ(modelHandle); }
+    /**
+        @brief  プレイヤーの当たり判定クラスのgetter関数
+        @return 現在の当たり判定情報が入ったクラスのポインタを返す
+    */
 	Sphere& GetCollisionSphere() { return *collisionSphere; }
+    /**
+        @brief  プレイヤーの高さのgetter関数
+        @return 現在のプレイヤーの高さを返す
+    */
 	float GetHight() { return exactlyPosition.y; }
+    /**
+        @brief  プレイヤーのポジションのgetter関数
+        @return 現在のプレイヤーのポジションを返す
+    */
 	VECTOR GetPosition() { return position; }
+    /**
+        @brief  プレイヤーのキリのいいポジションのgetter関数
+        @return 現在のプレイヤーのキリのいいポジションを返す
+    */
 	VECTOR GetExactlyPosition() { return exactlyPosition; }
+    /**
+        @brief  プレイヤーの要素位置のgetter関数
+        @return 現在のプレイヤーの要素位置を返す
+    */
 	IndexPair GetIndexPair() { return indexPair; }
+    /**
+        @brief  プレイヤーがのgetter関数
+        @return 現在のプレイヤーのキリのいいポジションを返す
+    */
 	bool GetIsAlive() { return isAlive; }
 	bool GetPlayerExplosion() { return playerExplosion; }
 	bool GetPlayingExplosion() { return playingExplosion; }
@@ -49,17 +79,13 @@ public:
 	int GetHeight() { return height; }
 	bool CheckGameEnd();
 private:
-	//-----------------------------------------------------------------------------//
-	//							プライベート関数
-	//-----------------------------------------------------------------------------//
+
 	void ChangeIndexPair(ActionManager& actionManager);	//プレイヤーの要素位置の変更
 	void ChangeExactlyPosition();
 	void Barrier();
 	void ChangePlayerState();
 	void ChangeReflection();							//変更の反映
-	//-----------------------------------------------------------------------------//
-	//							プライベート定数
-	//-----------------------------------------------------------------------------//
+
 	const VECTOR START_POS = {	/* X */	(BLOCK_NUM_X * BLOCK_SIZE / 2) - (BLOCK_SIZE / 2) ,
 								/* Y */	-220,
 								/* Z */	0.0f	};
@@ -67,9 +93,7 @@ private:
 	const float INVINCIBLE_OPACITY = 0.5f;				//無敵時の透明度
 	const float NORMAL_OPACITY = 1.0f;
 
-	//-----------------------------------------------------------------------------//
-	//							プライベート変数
-	//-----------------------------------------------------------------------------//
+
 	int			modelHandle;							//プレイヤーのモデルハンドル
 	VECTOR		position;								//プレイヤーのポジション
 	VECTOR		exactlyPosition;						//マップ上でキリがいいポジション

@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿//-----------------------------------------------------------------------------//
+//          リファクタリング：未                  チェック：未
+//-----------------------------------------------------------------------------//
+
+#pragma once
 
 //クラスの前方宣言
 class EnemyBase;
@@ -15,7 +19,7 @@ public:
 	~EnemyList();
 	void Update(Stage &stage,ActionManager &actionManager);
 	void Draw();
-	EnemyVector GetEnemyList();
+	EnemyContainer GetEnemyList();
 	void NextStageCreate(Stage& stage, ActionManager& actionManager);
 private:
 	//-----------------------------------------------------------------------------//
@@ -26,7 +30,7 @@ private:
 	//-----------------------------------------------------------------------------//
 	//							プライベート変数
 	//-----------------------------------------------------------------------------//
-	EnemyVector enemyList;
+	EnemyContainer enemyList;
 	int fireFlyModelHandle;
 	int boarModelHandle;
 	int map[BLOCK_NUM_Y][BLOCK_NUM_X];

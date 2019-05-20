@@ -1,4 +1,8 @@
-﻿#pragma once
+﻿//-----------------------------------------------------------------------------//
+//          リファクタリング：未                  チェック：未
+//-----------------------------------------------------------------------------//
+
+#pragma once
 
 //クラスの前方宣言
 class Stage;
@@ -15,7 +19,7 @@ public:
 	~FireList();
 	void Update(Stage &stage);
 	void Draw();
-	FireVector GetFireList();
+	FireContainer GetFireList();
 	bool needDrawModel(VECTOR position);
 private:
 	//-----------------------------------------------------------------------------//
@@ -27,7 +31,7 @@ private:
 	//-----------------------------------------------------------------------------//
 											//ブロックリスト
 	BlockMap fireBlockMap;										//ファイアブロックのMap
-	FireVector fireList;										//ファイアのリスト
+	FireContainer fireList;										//ファイアのリスト
 	std::vector<IndexPair> eraseList;							//Mapから消すブロックの要素位置のリスト
 	SoundManager* soundManager;
 	int timeCount;								

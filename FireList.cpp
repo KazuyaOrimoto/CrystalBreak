@@ -1,6 +1,7 @@
 ﻿//-----------------------------------------------------------------------------//
-//						必要なライブラリのインクルード
+//          リファクタリング：未                  チェック：未
 //-----------------------------------------------------------------------------//
+
 #include "Common.h"
 #include "FireList.h"
 #include "Stage.h"
@@ -98,7 +99,7 @@ void FireList::Draw()
 	}
 }
 
-FireVector FireList::GetFireList()
+FireContainer FireList::GetFireList()
 {
 	return fireList;
 }

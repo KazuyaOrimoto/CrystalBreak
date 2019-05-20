@@ -1,6 +1,7 @@
 ﻿//-----------------------------------------------------------------------------//
-//						必要なライブラリのインクルード
+//          リファクタリング：未                  チェック：未
 //-----------------------------------------------------------------------------//
+
 #include "Common.h"
 #include "SceneBase.h"
 #include "TitleScene.h"
@@ -16,16 +17,16 @@
 //-----------------------------------------------------------------------------//
 TitleScene::TitleScene()
 {
-	inputManager = InputManager::GetInstance();
-	fileManager = FileManager::GetInstance();
-	titleGraph = fileManager->GetTitleImage();
-	pushGraph = fileManager->GetPushImage();
-	demoPlayMovie = fileManager->GetDemoPlayMovie();
-	changingOpacityValue = 1;
-	SceneChangeFlag = false;
-	playMovie = false;
-	playcount = 0;
-	opacity = 0;
+    inputManager = InputManager::GetInstance();
+    fileManager = FileManager::GetInstance();
+    titleBackGroundGraph = fileManager->GetTitleImage();
+    pushStartGraph = fileManager->GetPushImage();
+    demoPlayMovie = fileManager->GetDemoPlayMovie();
+    changingOpacityValue = 1;
+    SceneChangeFlag = false;
+    playMovie = false;
+    playcount = 0;
+    pushStartOpacity = 0;
 }
 
 //-----------------------------------------------------------------------------//
@@ -33,7 +34,7 @@ TitleScene::TitleScene()
 //-----------------------------------------------------------------------------//
 TitleScene::~TitleScene()
 {
-	DeleteGraph(titleGraph);
+    DeleteGraph(titleBackGroundGraph);
 }
 
 //-----------------------------------------------------------------------------//
@@ -41,28 +42,27 @@ TitleScene::~TitleScene()
 //-----------------------------------------------------------------------------//
 SceneBase* TitleScene::Update()
 {
-	inputManager->Update();								//キーの入力情報の更新
-
-	if (inputManager->PushStartButton())
-	{
-		return new TutorialScene();
-	}
-
-	GraphAnimation();									//画像のアニメーション
-
-	needPlayingMovie = inputManager->PushAnyKey();
-
-	if (needPlayingMovie)
-	{
-		PlayingMovie();
-	}
-	else
-	{
-		playcount = 0;
-	}
-
-	return this;
-
+    inputManager->Update();								//キーの入力情報の更新
+    
+    if (inputManager->PushStartButton())
+    {
+        return new TutorialScene();
+    }
+    
+    GraphAnimation();									//画像のアニメーション
+    
+    needPlayingMovie = inputManager->PushAnyKey();
+    
+    if (needPlayingMovie)
+    {
+        PlayMovie();
+    }
+    else
+    {
+        playcount = 0;
+    }
+    
+    return this;
 }
 
 //-----------------------------------------------------------------------------//
@@ -70,17 +70,17 @@ SceneBase* TitleScene::Update()
 //-----------------------------------------------------------------------------//
 void TitleScene::Draw()
 {
-	if (playMovie)
-	{
-		DrawGraph(0,0, demoPlayMovie,FALSE);
-	}
-	else
-	{
-		SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX);
-		DrawGraph(0, 0, titleGraph, TRUE);
-		SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX - opacity);
-		DrawGraph(0, 0, pushGraph, TRUE);
-	}
+    if (playMovie)
+    {
+        DrawGraph(0,0, demoPlayMovie,FALSE);
+    }
+    else
+    {
+        SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX);
+        DrawGraph(0, 0, titleBackGroundGraph, TRUE);
+        SetDrawBlendMode(DX_BLENDMODE_ALPHA, ALPHA_MAX - pushStartOpacity);
+        DrawGraph(0, 0, pushStartGraph, TRUE);
+    }
 }
 
 //-----------------------------------------------------------------------------//
@@ -88,35 +88,35 @@ void TitleScene::Draw()
 //-----------------------------------------------------------------------------//
 void TitleScene::GraphAnimation()
 {
-	opacity += changingOpacityValue;
-	bool switchFlag = (opacity < 0 || OPACITY_MAX < opacity);		//不透明度が0より小さいor上限より大きい
-	if (switchFlag)
-	{
-		changingOpacityValue *= -1;
-	}
+    pushStartOpacity += changingOpacityValue;
+    bool switchFlag = (pushStartOpacity < 0 || OPACITY_MAX < pushStartOpacity);       //不透明度が0より小さいor上限より大きい
+    if (switchFlag)
+    {
+        changingOpacityValue *= -1;
+    }
 }
 
 //-----------------------------------------------------------------------------//
 //						デモプレイ動画を流す
 //-----------------------------------------------------------------------------//
-void TitleScene::PlayingMovie()
+void TitleScene::PlayMovie()
 {
-	playcount++;
-	if (playcount > playMovieUpToTime)
-	{
-		playMovie = true;
-	}
-	else
-	{
-		playMovie = false;
-	}
-
-	if (playMovie)
-	{
-		PlayMovieToGraph(demoPlayMovie);
-	}
-	else
-	{
-		SeekMovieToGraph(demoPlayMovie, 0);							//再生開始位置に戻す
-	}
+    playcount++;
+    if (playcount > PLAY_MOVIE_UP_TO_TIME)
+    {
+        playMovie = true;
+    }
+    else
+    {
+        playMovie = false;
+    }
+    
+    if (playMovie)
+    {
+        PlayMovieToGraph(demoPlayMovie);
+    }
+    else
+    {
+        SeekMovieToGraph(demoPlayMovie, 0);                         //再生開始位置に戻す
+    }
 }
